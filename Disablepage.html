@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timer & Clock</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900&subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+</head>
+    <style>
+#grad1 {
+    background: 
+    linear-gradient(217deg, blue, rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, blue, rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%);
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+#container {
+      max-width: 280px;
+      margin: auto;
+      margin-top: 50px;
+      background-color: #BDB7AA;
+      border: 2px solid #AAB0BD;
+      border-radius: 15px;
+      padding: 5px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 20px; }
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.previous {
+  background-color: #5A6170;
+  border: 1px solid #5A6170 ;
+  color: white;
+}
+.previous:hover {
+  background-color: white;
+  color: black;
+}
+input {font-weight:bold;}
+#inp1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 40px;
+    background-color:#5A6170;
+    width: 160px;
+    border: 1px solid #5A6170 ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#inp1:hover {
+  background-color: white;
+  color: black;
+}
+input[type=time]:disabled {
+  background: white;
+}
+.function {
+      background-color: #5A6170;
+      font-size: 10px;  }
+    .function:hover {
+      background-color: white;
+      color: black;
+      font-size: 15px;  }
+</style>
+    <body>
+        
+        <form onsubmit="window.location.href = '/Timer/Disable'; return false;">
+            <a href="/Page/0" class="previous" style="border-radius:40px ;"><b>Previous</b></a>
+        <input name="page" id="inp1" type="submit"  value="Timer Is Enable" style="font-size: 17px;text-align: center;">
+        </form>
+<div id="container">
+    <form onsubmit="window.location = '/Timer/' +  timeone.value +'/'+ timetwo.value ; return false;"> 
+      <b style="color: white;">ON Time :</b> <input id="time1" placeholder="Time" type="time" name="timeone" style="border-radius: 40px;border: 1px solid black;"required>
+        <br>
+        <b style="color: white;">OFF Time :</b> <input id="time2" placeholder="Time" type="time" name="timetwo" style="border-radius: 40px;border: 1px solid black;"required>
+        <br>
+        <input class="function"  type="submit" value="SET Time" style="border-radius: 10px;font-size: 17px;font-family: 'Times New Roman', Times, serif;">
+      </form>
+<form onsubmit="window.location = '/Clock/' +  date.value  ; return false;"> 
+  <b style="color: white;">SET Clock :</b>  <input type="datetime-local" id="date" name="date" style="border-radius: 40px;border: 1px solid black;" required>
+ <input type="submit" class="function"  value="SET Clock" style="border-radius: 10px;font-size:17px;font-family: 'Times New Roman', Times, serif;" >
+</form>
+</div>
+    </body>
+</html>
